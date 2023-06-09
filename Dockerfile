@@ -17,7 +17,7 @@ RUN npm install
 COPY . . 
 
 # Bind to port 8080
-EXPOSE 3000
+EXPOSE 3030
 
 # Start the server
 CMD [ "node", "index.js" ]

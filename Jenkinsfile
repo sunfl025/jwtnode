@@ -14,7 +14,7 @@ pipeline {
        
         stage('Build docker image'){
             steps{
-                sh 'docker build -t node_test . '
+                sh 'docker build -t jwt_node . '
                 
             }
         }
@@ -43,10 +43,10 @@ pipeline {
                 
                 script {
                     // sh 'docker pull hathanhhai/node_test:v1'
-                    sh 'docker stop app_node || true'
-                    sh 'docker rm app_node || true'
-                    sh 'docker rmi -f hathanhhai/node_test:v1'
-                    sh 'docker run -d -p 3030:3030 --name app_node node_test  '
+                    sh 'docker stop jwt_node || true'
+                    sh 'docker rm jwt_node || true'
+                    sh 'docker rmi -f hathanhhai/jwt_node:v1'
+                    sh 'docker run -d -p 3030:3030 --name jwt_node jwt_node  '
                 }
             }
         }
