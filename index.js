@@ -22,6 +22,6 @@ app.use(express.json());
 app.use("/v1/auth",authRoute);
 app.use("/v1/user",userRoute);
 //haha
-app.listen(8000, () => {
+app.listen(3030, () => {
     console.log("server is running");
 })

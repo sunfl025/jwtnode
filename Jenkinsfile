@@ -46,7 +46,7 @@ pipeline {
                     sh 'docker stop app_node || true'
                     sh 'docker rm app_node || true'
                     sh 'docker rmi -f hathanhhai/node_test:v1'
-                    sh 'docker run -d -p 3000:3000 --name app_node node_test  '
+                    sh 'docker run -d -p 3030:3030 --name app_node node_test  '
                 }
             }
         }
